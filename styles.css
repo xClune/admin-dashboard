@@ -8,8 +8,15 @@ body {
 
 body {
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: 1fr 3fr;
 
+    height: 100vh;
+}
+
+p {
+    font-size: 8px;
+    color: #52525b;
+    font-weight: normal;
 }
 
 
@@ -24,6 +31,8 @@ body {
     background-color: #38bdf8;
     color: white;
     font-weight: bold;
+
+    height:100%
 }
 
 .logo img {
@@ -54,9 +63,15 @@ ul {
 
 li {
     display: flex;
+    justify-content: flex-start;
     justify-content: space-between;
     margin-bottom: 20px;
     align-items: center;
+}
+
+li:hover {
+    color:#e5e7eb;
+    cursor: pointer;
 }
 
 li img {
@@ -67,6 +82,10 @@ li img {
 }
 
 /* Main Content */
+.main {
+    display: flex;
+    flex-direction: column;
+}
 
 /* Header */
 header {
@@ -181,16 +200,19 @@ p {
     margin-right: 10px;
 }
 
+.buttons button:hover {
+    box-shadow: 0px 2px 4px 0px lightgray;
+    cursor: pointer;
+}
 /* Main Section */
 
 .main-content {
     background-color: #e5e7eb;
-    height: 100vh;
     display: flex;
     flex-direction: row;
-    padding-left: 15px;
-    padding-top: 15px;
+    padding: 15px;
 
+    height: 100%;
 }
 
 .projects {
@@ -198,6 +220,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     width: 80%;
+    flex: 1 1 60%;
 }
 
 .project-card {
@@ -206,21 +229,124 @@ p {
     border-radius: 10px;
     border-left: 5px solid orange;
     padding: 20px;
+
+    display: grid;
+
+    background-color: white;
+}
+
+.project-card:hover {
+    border: 1px solid lightgray;
+    box-shadow: 0px 8px 10px 0px lightgray;
+    border-radius: 10px;
+    border-left: 5px solid orange;
+    padding: 20px;
+
+    display: grid;
+}
+
+.card-buttons {
+    position:relative;
+
+    align-self: flex-end;
+    justify-self: end;
+
+    margin-right: 10px;
+}
+
+.card-buttons img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.card-buttons img:hover {
+    height: 22px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 .ann-trending {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 15px 1fr 15px 1fr;
+    gap: 15px;
+    padding-left: 15px;
+    flex: 1 1 30%;
 }
 
-.announcements {
+.ann-card {
     display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px lightgray;
+
+    margin-bottom: 15px;
+    padding: 15px;
+
+    background-color: white;
 }
+
+.announcements:hover {
+    box-shadow: 0px 8px 10px 0px lightgray;
+}
+
+.ann1, .ann2, .ann3 {
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.ann2, .ann3 {
+    border-top: 1px solid grey;
+}
+
+/* .ann-text {
+    width: min-content;
+} */
 
 .trending {
     display:grid;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px lightgray;
+
+    padding: 15px;
+    padding-left: 30px;
+
+    align-items: center;
+    justify-content: start;
+
+    background-color: white;
 }
 
+.trending:hover {
+    box-shadow: 0px 8px 10px 0px lightgray;
+}
+
+.trending-sec {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.trending img {
+    height: 50px;
+    border-radius: 25px;
+
+    margin-right: 20px;
+}
+
+.tag {
+    font-size: 15px;
+}
+
+.post {
+    font-size: 15px;
+    color: grey;
+}
 
 
 
