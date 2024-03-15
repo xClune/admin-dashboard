@@ -10,7 +10,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 2.5fr;
 
-    height: 100vh;
 }
 
 
@@ -68,23 +67,29 @@ li img {
 }
 
 /* Main Content */
+
+/* Header */
 header {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
     width: 100%;
 }
 
+
+/* Search & Notifications Section */
 .search-notifications {
     display: grid;
     grid-template-columns: 3fr 1fr;
 
     align-items: center;
     justify-content: center;
-    
+
+    margin-top: 20px;
+    margin-right: 5px;
 }
 
 .search-notifications img {
-    height: 30px;
+    height: 25px;
     margin-right: 20px;
 }
 
@@ -95,12 +100,125 @@ header {
 }
 
 .search input {
-    width: 300px;
+    width: 70%;
+    height: 25px;
+
+    border: solid 1px grey;
+    background-color: lightgray;
+
+    border-radius: 13px;
 }
 
 .notifications {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+
+    justify-content: center;
+}
+
+#name-display {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#profile-icon {
+    border-radius: 15px;
+}
+
+/* Profile & Button Section */
+
+.header-bottom {
+    display: flex;
+    box-shadow: 0px 2px 4px 0px lightgray;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+
+    margin-top: 15px;
+    margin-left: 50px;
+    padding-bottom: 20px;
+}
+
+#profile-icon2 {
+    height: 60px;
+    border-radius: 30px;
+
+    margin-right: 25px;
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.greeting-name {
+    font-size: 24px;
+    font-weight:  bold;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 20px;
+}
+
+.buttons button {
+    background-color: #38bdf8;
+    color: white;
+    font-weight: bold;
+    border: none;
+
+    padding: 7px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+/* Main Section */
+
+.main-content {
+    background-color: #e5e7eb;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-top: 15px;
+
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 80%;
+}
+
+.project-card {
+    border: 1px solid lightgray;
+    box-shadow: 0px 2px 4px 0px lightgray;
+    border-radius: 10px;
+    border-left: 5px solid orange;
+    padding: 20px;
+}
+
+.ann-trending {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcements {
+    display:grid;
+}
+
+.trending {
+    display:grid;
 }
 
 
